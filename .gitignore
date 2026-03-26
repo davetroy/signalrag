@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+dist/
+build/
+
+# Project data (NEVER commit — contains personal message data)
+*.parquet
+.signalrag/
+
+# Local config
+.envrc
+.claude/settings.local.json
+CLAUDE.md
+
+# Research docs
+SACHA_STONE.md
+PLAN.md
+
+# OS
+.DS_Store

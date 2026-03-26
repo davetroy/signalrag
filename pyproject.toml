@@ -1,0 +1,36 @@
+[project]
+name = "signalrag"
+version = "0.1.0"
+description = "Personal intelligence database powered by Signal Desktop"
+requires-python = ">=3.12"
+license = "MIT"
+readme = "README.md"
+authors = [{name = "Dave Troy", email = "davetroy@america2.news"}]
+keywords = ["signal", "rag", "intelligence", "vector-search", "graph-analysis"]
+
+[project.urls]
+Homepage = "https://github.com/davetroy/signalrag"
+Repository = "https://github.com/davetroy/signalrag"
+Issues = "https://github.com/davetroy/signalrag/issues"
+dependencies = [
+    "sqlcipher3>=0.6.2",
+    "pycryptodome>=3.20",
+    "sentence-transformers>=5.0",
+    "lancedb>=0.29",
+    "networkx>=3.0",
+    "pandas>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+signalrag = "signalrag.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+llm = ["anthropic>=0.30", "openai>=1.30"]
+atlas = ["embedding-atlas"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
